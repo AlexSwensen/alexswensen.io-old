@@ -17,5 +17,9 @@ url: "http://alexswensen.io" # the base hostname & protocol for your site
 twitter_username: alexswens
 github_username:  alexswensen
 
+# Custom Settings
+google_analytics: UA-39293631-3
+
+
 # Build settings
 markdown: kramdown
