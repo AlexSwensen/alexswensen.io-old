@@ -1,0 +1,11 @@
+{
+  "name": "alexswensen.github.io",
+  "description": "A personal portfolio site in jekyll",
+  "main": "",
+  "authors": [
+    "Alexander Swensen"
+  ],
+  "license": "",
+  "homepage": "https://github.com/AlexSwensen/alexswensen.github.io",
+  "private": true
+}
