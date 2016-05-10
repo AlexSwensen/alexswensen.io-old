@@ -1,0 +1,21 @@
+{
+  "name": "alexswensen.github.io",
+  "description": "A personal site in jekyll",
+  "main": "",
+  "authors": [
+    "Alexander Swensen"
+  ],
+  "license": "MIT",
+  "homepage": "https://github.com/AlexSwensen/alexswensen.github.io",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap-material-design": "^0.5.9"
+  }
+}
