@@ -2,16 +2,16 @@
  * Syntax highlighting styles
  */
 .highlight {
-    background: #272822;
+    background: #fff;
     @extend %vertical-rhythm;
 
     .highlighter-rouge & {
-      background: #272822;
+      background: #eef;
     }
 
-    .c     { color: #75715e; font-style: italic } // Comment
-    .err   { color: #960050; background-color: #1e0010 } // Error
-    .k     { font-weight: bold; color: #66d9ef; } // Keyword
+    .c     { color: #998; font-style: italic } // Comment
+    .err   { color: #a61717; background-color: #e3d2d2 } // Error
+    .k     { font-weight: bold } // Keyword
     .o     { font-weight: bold } // Operator
     .cm    { color: #998; font-style: italic } // Comment.Multiline
     .cp    { color: #999; font-weight: bold } // Comment.Preproc

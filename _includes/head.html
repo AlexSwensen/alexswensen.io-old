@@ -1,34 +1,12 @@
 <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>
-        {% if page.title %}{{ page.title | escape }}
-        {% else %}{{ site.title | escape }}{% endif %}
-    </title>
-    <meta name="description" content="{% if page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}">
+  <title>{% if page.title %}{{ page.title | escape }}{% else %}{{ site.title | escape }}{% endif %}</title>
+  <meta name="description" content="{% if page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}">
 
-    <!-- jQuery -->
-    <script type="text/javascript" src="{{'/assets/bower_components/jquery/dist/jquery.min.js' | prepend: site.baseurl}}"></script>
-    <!-- End jQuery -->
-
-    <!-- Bootstrap -->
-    <link rel="stylesheet" href="{{'/assets/bower_components/bootstrap/dist/css/bootstrap.min.css' | prepend: site.baseurl }}">
-    <script type="text/javascript" link="{{'/assets/bower_components/bootstrap/js/bootstrap.min.js' | prepend: site.baseurl }}"></script>
-    <!-- End Bootstrap -->
-
-    <!-- Bootstrap Material -->
-    <link rel="stylesheet" href="{{'/assets/bower_components/bootstrap-material-design/dist/css/bootstrap-material-design.min.css' | prepend: site.baseurl }}">
-    <link rel="stylesheet" href="{{'/assets/bower_components/bootstrap-material-design/dist/css/ripples.min.css' | prepend: site.baseurl }}">
-    <script type="text/javascript" src="{{'/assets/bower_components/bootstrap-material-design/dist/js/material.min.js' | prepend: site.baseurl }}"></script>
-    <script type="text/javascript" src="{{' /assets/bower_components/bootstrap-material-design/dist/js/ripples.min.js' | prepend: site.baseurl}}"></script>
-    <script type="text/javascript">
-      $.material.init();
-    </script>
-    <!-- End Bootstrap Material -->
-
-    <link rel="stylesheet" href="{{ '/css/main.css' | prepend: site.baseurl }}">
-    <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
-    <link rel="alternate" type="application/rss+xml" title="{{ site.title }}" href="{{' /feed.xml' | prepend: site.baseurl | prepend: site.url }}">
+  <link rel="stylesheet" href="{{ "/css/main.css" | prepend: site.baseurl }}">
+  <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
+  <link rel="alternate" type="application/rss+xml" title="{{ site.title }}" href="{{ "/feed.xml" | prepend: site.baseurl | prepend: site.url }}">
 </head>
