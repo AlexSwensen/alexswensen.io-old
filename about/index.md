@@ -5,12 +5,13 @@ tags: [about, Alexander, me, personal]
 date: 2016-06-21
 ---
 
-![Image of Me](/assets/img/me.jpg){: .img-circle}
+<img src="/assets/img/me.jpg" style="display: block; margin: auto; max-width: 250px; border-radius: 50%; margin-bottom: 40px;">
 
 
-My name is Alexander. I'm a hard core geek. I write software, and dabble in photography & video a little on the side.
+My name is Alexander. I work as a Full-Stack Web & App Developer. I also dabble in Photograpy & Video.
+{: style="text-align: center"}
 
-Sometimes I write about stuff. I work full time as a Full-Stack Web & App developer.
+
 
 ### Personal Interests
 - Photography
