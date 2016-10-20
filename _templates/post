@@ -2,4 +2,8 @@
 layout: {{ layout }}
 title: "{{ title }}"
 date: {{ date }}
+excerpt: "lorem Ipsum Dolar Set Amet"
+tags: [sample post, readability, test, image]
+feature: http://placehold.it/300x300
+comments: true
 ---
