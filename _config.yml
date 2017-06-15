@@ -38,7 +38,7 @@ disqus_shortname:   alexswensenio
   #ad-slot:
 #bing-verify:
 #email:
-twitter:            alexswens
+twitter:            I_amAlexSwensen
 #facebook:
 github:             alexswensen
 #stackoverflow:     123456/username   from a "http://stackoverflow.com/users/123456/username" link
@@ -69,6 +69,8 @@ gems:
 
 jekyll-mentions:
     base_url: https://github.com
+
+excerpt_separator: <!--more-->
 
 # Exclude list
 exclude: [README.md, Gemfile, Gemfile.lock, node_modules, gulpfile.js, package.json, _site, src, vendor, CNAME, LICENSE, Rakefile]
