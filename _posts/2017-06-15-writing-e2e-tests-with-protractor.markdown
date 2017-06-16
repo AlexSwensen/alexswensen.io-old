@@ -3,7 +3,7 @@ layout: post
 title: "Writing E2E Tests With Protractor"
 date: 2017-06-15T17:12:37-05:00
 excerpt: "Coding is hard. Angular makes it easier, but it's still hard. With the complexity that Angular brings, unit testing can be hard. But the hardest thing about testing with Angular are E2E tests. This guide is written to solve the discrepancy between Jasmine unit tests, and Protractor E2E tests."
-tags: [sample post, readability, test, image]
+tags: [angular, tests, protractor]
 feature: http://i.imgur.com/9gkw6P7.jpg
 comments: true
 ---
@@ -19,7 +19,7 @@ Protractor E2E tests.
 
 ## The REPL
 
-There is piece that is *incredibly* useful when starting your tests,
+There a is piece that is *incredibly* useful when starting your tests,
 and that is Protractor's
 [Interactive Mode/REPL](https://github.com/angular/protractor/blob/master/docs/debugging.md#testing-out-protractor-interactively).
 
@@ -50,7 +50,7 @@ browser.get('http://www.my-domain.org')
 
 > ## So, I've got a REPL, what does Protractor give me that I can use?
 
-Well the quick answer its to go [read the docs](http://www.protractortest.org/#/api),
+Well the quick answer is to go [read the docs](http://www.protractortest.org/#/api),
 but i'll give you the highlights.
 
 E2E tests, unlike unit tests, require a flow. That means that each test
@@ -94,7 +94,7 @@ a complete reference I recommend the [Protractor API Docs](http://www.protractor
 
 I'll hit you with some of the not-so-clear bits and pieces. If you look at
 [Debugging Protractor Tests](https://github.com/angular/protractor/blob/master/docs/debugging.md)
-You will see 3 command stand out:
+You will see 3 function calls stand out:
 
 `browser.pause()`, `browser.debugger()` and if you look hard you will
 find `browser.explore()`.
@@ -177,8 +177,28 @@ gives you a REPL to control and _**explore**_ your app as Protractor would.
 
 > ## Alright, I think I get it! Anything else you can point me to?
 
-Awesome, I'm glad you understood most of that! I've linked this before in the post,
-but i'll give you two main places that I referenced when writing this post.
+Awesome, I'm glad you understood most of that! There are a few other bits of note.
+
+- If you encounter your tests failing, but debugging doesn't reveal anything obvious,
+you are probably hitting a race condition where the test is running faster than your application.
+This is especially common on CI systems like CircleCI or Jenkins
+where you are running on low resource environments.
+Try throwing a [`browser.sleep(1000)`](http://www.protractortest.org/#/api?view=webdriver.WebDriver.prototype.sleep) in there.
+
+
+- When debugging, you will be re-running the tests a _**lot**_.
+That's just how it works. Be patient. If you have a webpack build
+process, try and make that run as fast as possible. In a large
+application that can take almost as long as the tests.
+
+- use [`.sendKeys('any-string-here')`](http://www.protractortest.org/#/api?view=webdriver.WebElement.prototype.sendKeys) to fill in forms or perform key event actions.
+- use [`.clear()`](http://www.protractortest.org/#/api?view=webdriver.WebElement.prototype.clear) to clear a field.
+
+- try and modularize common steps that you use alot. It will make
+modifying existing tests a lot easier _when_ your application changes.
+
+I've linked to these before, but i'll give you two main articles I
+referenced when writing this post.
 
 
 [Debugging Protractor Docs](https://github.com/angular/protractor/blob/master/docs/debugging.md) - Grabbed some code examples from here
@@ -186,5 +206,7 @@ but i'll give you two main places that I referenced when writing this post.
 [Protractor API Docs](http://www.protractortest.org/#/api) - Protractor API Reference
 
 If you have any questions or comments, feel free to leave them below!
+
+Now get out there and write some tests!
 
 -- Alexander Swensen
