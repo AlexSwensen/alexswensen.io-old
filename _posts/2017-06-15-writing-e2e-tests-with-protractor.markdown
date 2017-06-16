@@ -102,7 +102,7 @@ find `browser.explore()`.
 
 These are your bread and butter of the debugging tools. If you have ever used python's `dbg`
 or `pytest.stack_trace()` you will know how these tools work. Sadly
-protractor doesn't have quite the same power. Sadly the naming convention is not what most frontend developers are used to.
+protractor doesn't have quite the same level of control, and the naming convention is not what most frontend developers are used to.
 
 _Note:_ if you use any of these, you will need to extend the test
 timeouts in your `protractor.config.js` file.
@@ -114,7 +114,7 @@ timeouts in your `protractor.config.js` file.
 
 `browser.pause()` is essentially a breakpoint that pauses execution on
 that line, allowing you to step forward one step at a time, and detach
-to continue tests.
+to continue tests. (very similar to a `debugger;` statement in javascript.)
 
 
 {% highlight javascript %}
