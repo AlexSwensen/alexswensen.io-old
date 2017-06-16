@@ -177,7 +177,7 @@ gives you a REPL to control and _**explore**_ your app as Protractor would.
 
 > ## Alright, I think I get it! Anything else you can point me to?
 
-Awesome, I'm glad you understood most of that! There are a few other bits of note.
+Awesome, I'm glad you understood most of that! Here are a few other bits of note.
 
 - If you encounter your tests failing, but debugging doesn't reveal anything obvious,
 you are probably hitting a race condition where the test is running faster than your application.
@@ -191,10 +191,10 @@ That's just how it works. Be patient. If you have a webpack build
 process, try and make that run as fast as possible. In a large
 application that can take almost as long as the tests.
 
-- use [`.sendKeys('any-string-here')`](http://www.protractortest.org/#/api?view=webdriver.WebElement.prototype.sendKeys) to fill in forms or perform key event actions.
-- use [`.clear()`](http://www.protractortest.org/#/api?view=webdriver.WebElement.prototype.clear) to clear a field.
+- Use [`.sendKeys('any-string-here')`](http://www.protractortest.org/#/api?view=webdriver.WebElement.prototype.sendKeys) to fill in forms or perform key event actions.
+- Use [`.clear()`](http://www.protractortest.org/#/api?view=webdriver.WebElement.prototype.clear) to clear a field.
 
-- try and modularize common steps that you use alot. It will make
+- Try and modularize common steps that you use alot. It will make
 modifying existing tests a lot easier _when_ your application changes.
 
 I've linked to these before, but i'll give you two main articles I
