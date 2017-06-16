@@ -13,7 +13,7 @@ comments: true
 Coding is hard. Angular makes it easier, but it's still hard. With the
 complexity that Angular brings, unit testing can be hard. But the
 hardest thing about testing with Angular are E2E tests. This guide
-is written to solve the discrepancy between Jasmine unit tests, and
+ is written to solve the discrepancy between Jasmine unit tests, and
 Protractor E2E tests.
 
 <!--more-->
