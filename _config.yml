@@ -30,9 +30,9 @@ disqus_shortname:   alexswensenio
 
 # Social
 # if you don't have any of social below, comment the line.
-#google:
+google:
   #plus:            #username
-  #analytics:
+  analytics: UA-39293631-3
   #verify:
   #ad-client:
   #ad-slot:
