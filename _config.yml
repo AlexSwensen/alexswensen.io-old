@@ -1,7 +1,7 @@
 # Site
 title:              Alexander Swensen
-bio:                "I'm Alexander Swensen. I'm a full stack web developer. <br> I sometimes write stuff here."
-description:        "I'm Alexander Swensen. I'm a full stack web developer. <br> I sometimes write stuff here."
+bio:                "I'm Alexander Swensen. I'm a full stack web developer based in Nashville. I sometimes write stuff here."
+description:        "I'm Alexander Swensen. I'm a full stack web developer based in Nashville. I sometimes write stuff here."
 reading_time:       true
 words_per_minute:   200
 logo:               'assets/img/me.jpg'
