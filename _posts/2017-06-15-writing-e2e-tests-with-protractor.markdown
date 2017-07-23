@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: single
 title: "Writing E2E Tests With Protractor"
 date: 2017-06-15T17:12:37-05:00
 excerpt: "Coding is hard. Angular makes it easier, but it's still hard. With the complexity that Angular brings, unit testing can be hard. But the hardest thing about testing with Angular are E2E tests. This guide is written to solve the discrepancy between Jasmine unit tests, and Protractor E2E tests."
