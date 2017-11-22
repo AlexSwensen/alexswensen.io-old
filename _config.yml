@@ -62,7 +62,7 @@ hackernews:        alexswensen
 twitch:            alexswensen
 
 # Gems
-gems:
+plugins:
   - jekyll-mentions
   - jekyll-feed
   - jekyll-sitemap
