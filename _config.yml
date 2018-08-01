@@ -42,7 +42,7 @@ twitter:            agswens
 #facebook:
 github:             alexswensen
 #stackoverflow:     123456/username   from a "http://stackoverflow.com/users/123456/username" link
-#linkedin:          username
+linkedin:           alexswensen
 #xing:              username
 instagram:          alexanderswensen
 #lastfm:            username
@@ -58,8 +58,8 @@ instagram:          alexanderswensen
 #codepen:           username
 #keybase:           username
 #xmpp:              username@server.com
-hackernews:        alexswensen
-twitch:            alexswensen
+# hackernews:        alexswensen
+twitch:             alexswensen
 
 # Gems
 plugins:
