@@ -18,7 +18,7 @@ minimal_mistakes_skin    : "air" # "default", "air", "aqua", "contrast", "dark",
 locale                   : "en-US"
 title                    : "alexswensen.io"
 title_separator          : "-"
-# name                     : "Your Name"
+name                     : "Alexander Swensen"
 # description              : "An amazing website."
 url                      : "https://alexswensen.io" # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
 baseurl                  : # the subpath of your site, e.g. "/blog"
