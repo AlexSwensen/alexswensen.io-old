@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: single
 title: "\"WeMos\" ESP32 Notes"
 date: 2017-10-31T22:19:31-05:00
 excerpt: "My notes on the fake WeMos branded ESP32."

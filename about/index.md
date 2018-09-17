@@ -1,11 +1,11 @@
 ---
-layout: page
+layout: splash
 title: About Me
 tags: [about, Alexander, me, personal]
 date: 2016-06-21
 ---
 
-<img src="/assets/img/me.jpg" style="display: block; margin: auto; max-width: 250px; border-radius: 50%; margin-bottom: 40px;">
+<img src="/assets/images/me.jpg" style="display: block; margin: auto; max-width: 250px; border-radius: 50%; margin-top: 20px; margin-bottom: 40px;">
 
 
 My name is Alexander. I work as a Full-Stack Web & App Developer. I also dabble in Photograpy & Video. <br>
