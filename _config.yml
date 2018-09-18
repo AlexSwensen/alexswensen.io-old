@@ -108,7 +108,7 @@ author:
   links:
     - label: "Email"
       icon: "fas fa-fw fa-envelope-square"
-      url: mailto:alex.swensen@gmail.com
+      url: mailto:contact@alexswensen.io
     - label: "Website"
       icon: "fas fa-fw fa-link"
       # url: "https://your-website.com"
@@ -130,7 +130,7 @@ footer:
   links:
     - label: "Twitter"
       icon: "fab fa-fw fa-twitter-square"
-      # url:
+      url: "https://twitter.com/agswens"
     - label: "Facebook"
       icon: "fab fa-fw fa-facebook-square"
       # url:
@@ -145,7 +145,7 @@ footer:
       # url:
     - label: "Instagram"
       icon: "fab fa-fw fa-instagram"
-      # url:
+      url: "https://instagram.com/alexanderswensen"
 
 
 # Reading Files
