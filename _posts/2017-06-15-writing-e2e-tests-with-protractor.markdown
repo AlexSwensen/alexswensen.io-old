@@ -34,16 +34,13 @@ It's essentially a permanent version of `browser.explore()` (see debugging secti
 
 You run it by running:
 
-```
-protractor --elementExplorer
-```
-
-
-Note that if you have a webpack config you might need to point Protractor to the config as well.
-
-```
+```terminal
 protractor [configFile] [options] --elementExplorer
 ```
+
+
+**Note**: _if you have a webpack config you might need to point Protractor to the config as well._
+{: .notice--info}
 
 From there you get a full REPL to enter protractor commands.
 

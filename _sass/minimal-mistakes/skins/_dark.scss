@@ -3,7 +3,7 @@
    ========================================================================== */
 
 /* Colors */
-$background-color: #012E41 !default;
+$background-color: #23292b !default;
 $text-color: #eaeaea !default;
 $primary-color: #FC4952 !default;
 $border-color: mix(#fff, $background-color, 20%) !default;
@@ -40,3 +40,6 @@ $base0f: #cc6633 !default;
 .page__footer-follow .social-icons .svg-inline--fa {
   color: inherit;
 }
+
+
+@import "../../custom";
