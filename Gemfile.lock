@@ -123,7 +123,7 @@ PLATFORMS
 DEPENDENCIES
   jekyll (~> 3.8.5)
   jekyll-feed (~> 0.6)
-  minimal-mistakes-jekyll
+  minimal-mistakes-jekyll (~> 4.15.1)
   octopress (~> 3.0)
   tzinfo-data
 
