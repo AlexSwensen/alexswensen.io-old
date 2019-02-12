@@ -36,6 +36,14 @@ $base0d: #3777e6 !default;
 $base0e: #ad00a1 !default;
 $base0f: #cc6633 !default;
 
+
+*::selection {
+  background: #0ac4dd !important; /* WebKit/Blink Browsers */
+}
+*::-moz-selection {
+  background: #0ac4dd !important; /* Gecko Browsers */
+}
+
 .author__urls.social-icons .svg-inline--fa,
 .page__footer-follow .social-icons .svg-inline--fa {
   color: inherit;
