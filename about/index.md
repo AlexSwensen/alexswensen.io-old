@@ -17,6 +17,7 @@ I make life easier by abstracting complexity.
 ### Favorite Languages, Frameworks, and Practices
 - TypeScript (Seriously the best thing since ES2015)
 - AngularJS & Angular
+- React
 - Python
 - C++
 - SCSS/Sass
