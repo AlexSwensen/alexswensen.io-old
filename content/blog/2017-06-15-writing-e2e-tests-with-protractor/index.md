@@ -62,7 +62,7 @@ I personally organize each flow in a `describe` block, with each step as
 a `it` block.
 
 
-```js
+```javascript
 describe("login flow", function () {
     it('should load the page', function () {
         browser.get('https://my-domain.org/login');
