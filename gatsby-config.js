@@ -9,6 +9,20 @@ module.exports = {
     },
   },
   plugins: [
+    // You can have multiple instances of this plugin
+    // to create pages from React components in different directories.
+    //
+    // The following sets up the pattern of having multiple
+    // "pages" directories in your project
+    {
+      resolve: `gatsby-plugin-page-creator`,
+      options: {
+        path: `${__dirname}/src/indexes/pages`,
+        // ignore: [`blog.(js|ts)?(x)`],
+        // See pattern syntax recognized by micromatch
+        // https://www.npmjs.com/package/micromatch#matching-features
+      }
+    },
     {
       resolve: `gatsby-transformer-remark`,
       options: {
