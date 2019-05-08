@@ -118,7 +118,7 @@ module.exports = {
         short_name: `alexswensenio`,
         start_url: `/`,
         background_color: `#ffffff`,
-        theme_color: `#663399`,
+        theme_color: `#000000`,
         display: `minimal-ui`,
         icon: `content/assets/fav-icon.png`,
       },
