@@ -23,8 +23,11 @@ class NavBar extends React.Component {
     return (
       <div style={{
         display: `flex`,
+        padding: rhythm(1),
         flexDirection: `row`,
         alignItems: `center`,
+        backgroundColor: `#000000`,
+        color: `#ffffff`
 
       }}>
         <HeaderTitle location={location} title={title}/>

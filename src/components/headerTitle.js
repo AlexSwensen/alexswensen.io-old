@@ -12,8 +12,8 @@ class HeaderTitle extends React.Component {
         <h1
           style={{
             ...scale(1),
-            marginBottom: rhythm(1.5),
             marginTop: 0,
+            marginBottom: 0,
           }}
         >
           <Link
@@ -34,6 +34,7 @@ class HeaderTitle extends React.Component {
           style={{
             fontFamily: `Montserrat, sans-serif`,
             marginTop: 0,
+            marginBottom: 0,
           }}
         >
           <Link
