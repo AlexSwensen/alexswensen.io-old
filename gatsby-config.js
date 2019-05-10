@@ -10,6 +10,7 @@ module.exports = {
     },
   },
   plugins: [
+    `gatsby-plugin-sass`,
     // You can have multiple instances of this plugin
     // to create pages from React components in different directories.
     //

@@ -1,0 +1,25 @@
+.navBar {
+  display: flex;
+  flex-direction: row;
+  padding: 28px;
+  align-items: center;
+  background-color: #000000;
+  color: #ffffff;
+  flex-wrap: wrap;
+}
+
+.menuItems {
+  li {
+    margin-bottom: 0;
+  }
+  a {
+    font-family: "Montserrat, sans-serif";
+    font-weight: 800;
+    font-size: 20px;
+    color: #ffffff;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}

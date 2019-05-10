@@ -8,7 +8,7 @@ class AboutPage extends React.Component {
     const siteTitle = data.site.siteMetadata.title
     return (
       <Layout location={this.props.location} title={siteTitle}>
-        <h1>About</h1>
+        <h1 style={{marginTop: 0}}>About</h1>
         <p>Hey there! My name is Alexander Swensen!</p>
         <p>I work as a software engineer at <a href="https://corp.studionow.com/" target="_blank" rel="noopener noreferrer">StudioNow</a>.</p>
       </Layout>
