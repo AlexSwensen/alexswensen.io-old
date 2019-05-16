@@ -7,23 +7,25 @@ exports.createPages = ({ graphql, actions }) => {
   const blogPost = path.resolve(`./src/templates/blog-post.js`)
   return graphql(
     `
-      {
-        allMarkdownRemark(
-          sort: { fields: [frontmatter___date], order: DESC }
-          limit: 1000
-        ) {
-          edges {
-            node {
-              fields {
-                slug
-              }
-              frontmatter {
-                title
-              }
+    {
+      allMarkdownRemark(
+        sort: {fields: [frontmatter___date], order: DESC},
+        limit: 1000,
+        filter: {fileAbsolutePath: {regex : "\/blog/"}}
+      ) {
+        edges {
+          node {
+            fields {
+              slug
+            }
+            frontmatter {
+              title
             }
           }
         }
       }
+    }
+
     `
   ).then(result => {
     if (result.errors) {
