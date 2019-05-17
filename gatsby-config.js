@@ -16,15 +16,15 @@ module.exports = {
     //
     // The following sets up the pattern of having multiple
     // "pages" directories in your project
-    {
-      resolve: `gatsby-plugin-page-creator`,
-      options: {
-        path: `${__dirname}/src/indexes/pages`,
-        // ignore: [`blog.(js|ts)?(x)`],
-        // See pattern syntax recognized by micromatch
-        // https://www.npmjs.com/package/micromatch#matching-features
-      }
-    },
+    // {
+    //   resolve: `gatsby-plugin-page-creator`,
+    //   options: {
+    //     path: `${__dirname}/src/indexes/pages`,
+    //     // ignore: [`blog.(js|ts)?(x)`],
+    //     // See pattern syntax recognized by micromatch
+    //     // https://www.npmjs.com/package/micromatch#matching-features
+    //   }
+    // },
     {
       resolve: `gatsby-transformer-remark`,
       options: {
