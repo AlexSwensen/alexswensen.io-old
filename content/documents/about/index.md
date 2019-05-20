@@ -2,8 +2,10 @@
 title: "About"
 ---
 
-Hey there, my name is Alexander Swensen. I work for [StudioNow](https://corp.studionow.com).
+Hey there, my name is Alexander Swensen. I work for <a href="https://corp.studionow.com" target="_blank" rel="noopener noreferrer">StudioNow</a> as a Senior Software Engineer.
 
+I specialize in frontend frameworks such as Angular and React. <br/>
+I also enjoy working with Node, Flask, and Django.
 
 ### Favorite Languages, Frameworks, and Practices
 - TypeScript (Seriously the best thing since ES2015)
@@ -11,14 +13,10 @@ Hey there, my name is Alexander Swensen. I work for [StudioNow](https://corp.stu
 - React
 - Python
 - C++
-- SCSS/Sass
-- Tests - Seriously, how do you refactor without them?...
-- Continuous Integration
-- Tooling in general
+
 
 
 ### Nerdy Things I like
-
 - Dungeons & Dragons
 - 3D Printing
 - Internet of Things
