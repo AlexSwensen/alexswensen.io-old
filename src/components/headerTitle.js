@@ -12,6 +12,7 @@ class HeaderTitle extends React.Component {
             ...scale(1),
             marginTop: 0,
             marginBottom: 0,
+            wordBreak: `break-all`,
           }}
         >
           <Link

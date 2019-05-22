@@ -4,17 +4,14 @@ title: "About"
 
 Hey there, my name is Alexander Swensen. I work for <a href="https://corp.studionow.com" target="_blank" rel="noopener noreferrer">StudioNow</a> as a Senior Software Engineer.
 
-I specialize in frontend frameworks such as Angular and React. <br/>
-I also enjoy working with Node, Flask, and Django.
+I enjoy building apps in [Angular](https://angular.io/) and [React.js](https://reactjs.org/), as well as with Node, [Flask](http://flask.pocoo.org/), and [Django](https://www.djangoproject.com/).
 
 ### Favorite Languages, Frameworks, and Practices
-- TypeScript (Seriously the best thing since ES2015)
+- TypeScript (Because types!)
 - AngularJS & Angular
 - React
 - Python
 - C++
-
-
 
 ### Nerdy Things I like
 - Dungeons & Dragons
