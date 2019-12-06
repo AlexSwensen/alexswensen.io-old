@@ -1,5 +1,5 @@
 ---
-title: "Setting up VSCode Python3 Intellisense"
+title: "Setting up Python3 Intellisense in Visual Studio Code"
 date: 2019-12-06T22:00:00-05:00
 description: "Because for some reason it isn't setup by default..."
 ---
@@ -8,7 +8,7 @@ Because for some reason it isn't setup by default...
 
 ---
 
-So recently while working on a project I have transitioned into doing a lot more work in our Flask based backend. I think I have been spoiled by the amount of intellisense that is built into TypeScript, because working without it in Python3 is _not_ pleasant. At one point it worked perfectly fine with the VSCode Python extension installed, and sometimes i would install `importmagic` as well. Well not so much anymore. So I spent a few hours trying to figure this out.
+So recently while working on a project I have transitioned into doing a lot more work in our Flask based backend. I think I have been spoiled by the amount of intellisense that is built into TypeScript, because working without it in Python3 is _not_ pleasant. At one point it worked perfectly fine with the VSCode Python extension installed, and sometimes i would install the [importmagic](https://marketplace.visualstudio.com/items?itemName=brainfit.vscode-importmagic) extension as well. Well not so much anymore. So I spent a few hours trying to figure this out.
 
 Turns out the native Python extension tries to use `jedi` for intellisense, but (at least in my configuration) it doesn't seem to work. Thankfully there is another alternative. Microsoft also develops the `python-language-server` package for vscode. In order to enable it you have to disable Jedi.
 
