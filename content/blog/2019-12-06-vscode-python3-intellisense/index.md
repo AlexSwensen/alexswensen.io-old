@@ -27,7 +27,7 @@ Once VSCode is done and reloaded, it will start to index your project. This take
 
 ## For Teams:
 
-Assuming your team has embraced vscode, and you have both `.vscode/extensions.json` and `.vscode/settings.json` in your version control, recommend adding the following entries.
+Assuming your team has embraced vscode, and you have both `.vscode/extensions.json` and `.vscode/settings.json` in your version control, I recommend adding the following entries.
 
 ```json
 // extensions.json
