@@ -24,6 +24,7 @@ class NavBar extends React.Component {
             {/* <ListLink to="/posts/">posts</ListLink>
             <ListLink to="/projects/">projects</ListLink> */}
             <ListLink to="/about/">about</ListLink>
+            <ListLink to="/resume/">resume</ListLink>
           </ul>
         </div>
       </div>
