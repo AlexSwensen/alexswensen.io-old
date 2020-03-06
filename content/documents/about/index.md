@@ -2,7 +2,7 @@
 title: "About"
 ---
 
-Hey there, my name is Alexander Swensen. I work for <a href="https://corp.studionow.com" target="_blank" rel="noopener noreferrer">StudioNow</a> as a Senior Software Engineer.
+Hey there, my name is Alexander Swensen. I work for <a href="https://www.eventbrite.com/" target="_blank" rel="noopener noreferrer">Eventbrite</a> as a Software Engineer II on their frontend architecture team..
 
 I enjoy building apps in [Angular](https://angular.io/) and [React.js](https://reactjs.org/), as well as with Node, [Flask](http://flask.pocoo.org/), and [Django](https://www.djangoproject.com/).
 
