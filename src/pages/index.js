@@ -4,7 +4,7 @@ import { Link, graphql } from "gatsby"
 import Bio from "../components/bio"
 import Layout from "../components/layout/layout"
 import SEO from "../components/seo"
-import { rhythm } from "../utils/typography"
+import BlogListItem from "../components/blog-list-item/blog-list-item"
 
 class BlogIndex extends React.Component {
   render() {
@@ -21,26 +21,7 @@ class BlogIndex extends React.Component {
         <Bio />
         <h4>A few of my thoughts...</h4>
         {posts.map(({ node }) => {
-          const title = node.frontmatter.title || node.fields.slug
-          return (
-            <div key={node.fields.slug}>
-              <h3
-                style={{
-                  marginBottom: rhythm(1 / 4),
-                }}
-              >
-                <Link style={{ boxShadow: `none` }} to={node.fields.slug}>
-                  {title}
-                </Link>
-              </h3>
-              <small>{node.frontmatter.date}</small>
-              <p
-                dangerouslySetInnerHTML={{
-                  __html: node.frontmatter.description || node.excerpt,
-                }}
-              />
-            </div>
-          )
+          return <BlogListItem post={node}></BlogListItem>
         })}
       </Layout>
     )
@@ -56,7 +37,10 @@ export const pageQuery = graphql`
         title
       }
     }
-    allMarkdownRemark(sort: {fields: [frontmatter___date], order: DESC}, filter: {fileAbsolutePath: {regex: "/blog/"}}) {
+    allMarkdownRemark(
+      sort: { fields: [frontmatter___date], order: DESC }
+      filter: { fileAbsolutePath: { regex: "/blog/" } }
+    ) {
       edges {
         node {
           excerpt
@@ -72,5 +56,4 @@ export const pageQuery = graphql`
       }
     }
   }
-
 `
