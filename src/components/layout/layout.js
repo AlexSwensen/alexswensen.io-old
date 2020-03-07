@@ -1,7 +1,8 @@
 import React from "react"
 
-import { rhythm } from "../utils/typography"
-import NavBar from './nav-bar/nav-bar';
+import { rhythm } from "../../utils/typography"
+import NavBar from '../nav-bar/nav-bar';
+import styles from './layout.module.scss';
 
 class Layout extends React.Component {
   render() {
@@ -11,7 +12,7 @@ class Layout extends React.Component {
         <header>
           <NavBar location={location} title={title}/>
         </header>
-        <div style={{
+        <div className={styles.mainContent} style={{
             marginLeft: `auto`,
             marginRight: `auto`,
             maxWidth: rhythm(50),
