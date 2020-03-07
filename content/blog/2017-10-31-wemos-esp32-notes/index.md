@@ -2,6 +2,7 @@
 title: "\"WeMos\" ESP32 Notes"
 date: 2017-10-31T22:19:31-05:00
 description: "My notes on the fake WeMos branded ESP32."
+featuredImage: "./wemos.jpg"
 ---
 
 ## If you haven't caught on to the ESP32 yet, you really should.

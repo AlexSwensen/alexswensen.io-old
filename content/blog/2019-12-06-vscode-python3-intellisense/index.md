@@ -2,6 +2,7 @@
 title: "Setting up Python3 Intellisense in Visual Studio Code"
 date: 2019-12-06T14:00:00-05:00
 description: "Because for some reason it isn't setup by default..."
+featuredImage: "./vscode-python.png"
 ---
 
 Because for some reason it isn't setup by default...

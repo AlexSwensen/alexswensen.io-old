@@ -6,6 +6,8 @@ import styles from "./blog-list-item.module.scss"
 class BlogListItem extends React.Component {
   render() {
     const { post } = this.props
+    // const featuredImageFluid = post.frontmatter.featuredImage.childImageSharp.fluid
+    // console.log(featuredImageFluid)
     const title = post.frontmatter.title || post.fields.slug
     return (
       <div className={styles.BlogListItem} key={post.fields.slug}>
