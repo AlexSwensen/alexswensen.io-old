@@ -2,4 +2,4 @@
 import "typeface-montserrat"
 import "typeface-merriweather"
 // gatsby-browser.js
-import "prismjs/themes/prism-coy.css"
+import "prismjs/themes/prism-tomorrow.css"
