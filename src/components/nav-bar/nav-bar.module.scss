@@ -3,9 +3,10 @@
   flex-direction: row;
   padding: 28px;
   align-items: center;
-  background-color: #000000;
-  color: #ffffff;
+  background-color: rgb(16, 16, 22);
+  color: rgb(228, 228, 228);
   flex-wrap: wrap;
+  border-bottom: 1px solid rgb(124, 124, 124);
 }
 
 .menuItems {
@@ -16,7 +17,7 @@
     font-family: "Montserrat, sans-serif";
     font-weight: 800;
     font-size: 20px;
-    color: #ffffff;
+    color: rgb(228, 228, 228);
 
     &:hover {
       text-decoration: underline;
