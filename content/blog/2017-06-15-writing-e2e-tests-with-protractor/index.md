@@ -29,13 +29,12 @@ It's essentially a permanent version of `browser.explore()` (see debugging secti
 
 You run it by running:
 
-```terminal
-protractor [configFile] [options] --elementExplorer
+```shell-session
+$ protractor [configFile] [options] --elementExplorer
 ```
 
 
 **Note**: _if you have a webpack config you might need to point Protractor to the config as well._
-{: .notice--info}
 
 From there you get a full REPL to enter protractor commands.
 
@@ -149,7 +148,7 @@ it('should fail to find a non-existent element', function() {
 For this reason, if you wish to use `browser.debugger()`
 you need to run your protractor tests in `debug` mode:
 
-```
+```shell-session
 protractor debug debugging/failureConf.js
 ```
 
