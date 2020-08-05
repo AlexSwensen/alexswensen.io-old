@@ -89,7 +89,7 @@ module.exports = {
         icon: `src/content/img/fav-icon.png`
       },
     },
-    'gatsby-plugin-offline',
+    'gatsby-plugin-remove-serviceworker',
     {
       resolve: 'gatsby-plugin-postcss',
       options: {
