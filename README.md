@@ -1,102 +1,89 @@
-<!-- AUTO-GENERATED-CONTENT:START (STARTER) -->
+# gatsby-casper
 
+Demo: https://gatsby-casper.netlify.app
 
-<p align="center">
-  <a href="https://www.gatsbyjs.org">
-    <img alt="Gatsby" src="https://www.gatsbyjs.org/monogram.svg" width="60" />
-  </a>
-</p>
-<h1 align="center">
-  Gatsby's blog starter
-</h1>
+This is a static blog generator and starter gatsby repo. A port of [Casper](https://github.com/TryGhost/Casper) v3 a theme from [Ghost](https://ghost.org/) for [GatsbyJS](https://www.gatsbyjs.org/) using [TypeScript](https://www.typescriptlang.org/).
 
-[![Netlify Status](https://api.netlify.com/api/v1/badges/614dc5f2-f5ca-48ec-beb4-d80e79320021/deploy-status)](https://app.netlify.com/sites/alexswensenio/deploys)
+## Getting Started
 
+Clone this repo.
 
-Kick off your project with this blog boilerplate. This starter ships with the main Gatsby configuration files you might need to get up and running blazing fast with the blazing fast app generator for React.
+```
+git clone https://github.com/scttcper/gatsby-casper.git --depth=1
+```
 
-_Have another more specific idea? You may want to check out our vibrant collection of [official and community-created starters](https://www.gatsbyjs.org/docs/gatsby-starters/)._
+Remove .git folder and setup a new one
 
-## 🚀 Quick start
+```
+rm -rf .git && git init
+```
 
-1.  **Create a Gatsby site.**
+Edit website-config.ts with your website settings.
+Either disable subscribe or setup a mailchimp list and add the form action and hidden field input name.
 
-    Use the Gatsby CLI to create a new site, specifying the blog starter.
+Now push to whatever repo you want!
 
-    ```sh
-    # create a new Gatsby site using the blog starter
-    gatsby new my-blog-starter https://github.com/gatsbyjs/gatsby-starter-blog
-    ```
+### Progress
 
-1.  **Start developing.**
+- [x] emotion / component styles
+- [x] home page
+- [x] tag page
+- [x] author page
+- [x] blog page
+  - [x] subscribe form - using [mailchimp](https://mailchimp.com)
+  - [ ] full width images in markdown? - not sure if possible
+  - [x] multiple post authors
+- [x] 404 page
+- [x] subscribe modal/overlay
+- [x] rss feed (on production build)
+- [ ] polish ✨
+  - [x] meta tags
+  - [x] page titles
+  - [ ] pagination
 
-    Navigate into your new site’s directory and start it up.
+### Deploy to Netlify
 
-    ```sh
-    cd my-blog-starter/
-    gatsby develop
-    ```
+[![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/scttcper/gatsby-casper)
 
-1.  **Open the source code and start editing!**
+## How to configure Google Analytics
 
-    Your site is now running at `http://localhost:8000`!
+Edit `gatsby-config.js` and add your tracking ID
 
-    _Note: You'll also see a second link: _`http://localhost:8000/___graphql`_. This is a tool you can use to experiment with querying your data. Learn more about using this tool in the [Gatsby tutorial](https://www.gatsbyjs.org/tutorial/part-five/#introducing-graphiql)._
+```javascript
+{
+    resolve: `gatsby-plugin-google-analytics`,
+    options: {
+      // Here goes your tracking ID
+      trackingId: 'UA-XXXX-Y',
+      // Puts tracking script in the head instead of the body
+      head: true,
+      // IP anonymization for GDPR compliance
+      anonymize: true,
+      // Disable analytics for users with `Do Not Track` enabled
+      respectDNT: true,
+      // Avoids sending pageview hits from custom paths
+      exclude: ['/preview/**'],
+      // Specifies what percentage of users should be tracked
+      sampleRate: 100,
+      // Determines how often site speed tracking beacons will be sent
+      siteSpeedSampleRate: 10,
+    },
+},
+```
 
-    Open the `my-blog-starter` directory in your code editor of choice and edit `src/pages/index.js`. Save your changes and the browser will update in real time!
+## How to edit your site title and description
 
-## 🧐 What's inside?
+Edit `gatsby-config.js` section `siteMetadata`
 
-A quick look at the top-level files and directories you'll see in a Gatsby project.
+```javascript
+ siteMetadata: {
+    title: 'My awesome site name',
+    description: 'This is a description for my site',
+    siteUrl: 'https://mysite.com', // full path to blog - no ending slash
+  },
+```
 
-    .
-    ├── node_modules
-    ├── src
-    ├── .gitignore
-    ├── .prettierrc
-    ├── gatsby-browser.js
-    ├── gatsby-config.js
-    ├── gatsby-node.js
-    ├── gatsby-ssr.js
-    ├── LICENSE
-    ├── package-lock.json
-    ├── package.json
-    └── README.md
+## How to adjust pagination
 
-1.  **`/node_modules`**: This directory contains all of the modules of code that your project depends on (npm packages) are automatically installed.
-
-2.  **`/src`**: This directory will contain all of the code related to what you will see on the front-end of your site (what you see in the browser) such as your site header or a page template. `src` is a convention for “source code”.
-
-3.  **`.gitignore`**: This file tells git which files it should not track / not maintain a version history for.
-
-4.  **`.prettierrc`**: This is a configuration file for [Prettier](https://prettier.io/). Prettier is a tool to help keep the formatting of your code consistent.
-
-5.  **`gatsby-browser.js`**: This file is where Gatsby expects to find any usage of the [Gatsby browser APIs](https://www.gatsbyjs.org/docs/browser-apis/) (if any). These allow customization/extension of default Gatsby settings affecting the browser.
-
-6.  **`gatsby-config.js`**: This is the main configuration file for a Gatsby site. This is where you can specify information about your site (metadata) like the site title and description, which Gatsby plugins you’d like to include, etc. (Check out the [config docs](https://www.gatsbyjs.org/docs/gatsby-config/) for more detail).
-
-7.  **`gatsby-node.js`**: This file is where Gatsby expects to find any usage of the [Gatsby Node APIs](https://www.gatsbyjs.org/docs/node-apis/) (if any). These allow customization/extension of default Gatsby settings affecting pieces of the site build process.
-
-8.  **`gatsby-ssr.js`**: This file is where Gatsby expects to find any usage of the [Gatsby server-side rendering APIs](https://www.gatsbyjs.org/docs/ssr-apis/) (if any). These allow customization of default Gatsby settings affecting server-side rendering.
-
-9.  **`LICENSE`**: Gatsby is licensed under the MIT license.
-
-10. **`package-lock.json`** (See `package.json` below, first). This is an automatically generated file based on the exact versions of your npm dependencies that were installed for your project. **(You won’t change this file directly).**
-
-11. **`package.json`**: A manifest file for Node.js projects, which includes things like metadata (the project’s name, author, etc). This manifest is how npm knows which packages to install for your project.
-
-12. **`README.md`**: A text file containing useful reference information about your project.
-
-## 🎓 Learning Gatsby
-
-Looking for more guidance? Full documentation for Gatsby lives [on the website](https://www.gatsbyjs.org/). Here are some places to start:
-
-- **For most developers, we recommend starting with our [in-depth tutorial for creating a site with Gatsby](https://www.gatsbyjs.org/tutorial/).** It starts with zero assumptions about your level of ability and walks through every step of the process.
-
-- **To dive straight into code samples, head [to our documentation](https://www.gatsbyjs.org/docs/).** In particular, check out the _Guides_, _API Reference_, and _Advanced Tutorials_ sections in the sidebar.
-
-## 💫 Deploy
-
-[![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/gatsbyjs/gatsby-starter-blog)
-
-<!-- AUTO-GENERATED-CONTENT:END -->
+In `gatsby-node.js`, edit the `postsPerPage` constant. The default value is
+six posts per page.
