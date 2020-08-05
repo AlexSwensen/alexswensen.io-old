@@ -53,10 +53,10 @@ export interface WebsiteConfig {
 }
 
 const config: WebsiteConfig = {
-  title: 'AlexSwensen',
+  title: 'AlexSwensen.io',
   description: '',
   coverImage: 'img/blog-cover.png',
-  logo: 'img/ghost-logo.png',
+  logo: 'img/fav-icon.png',
   lang: 'en',
   siteUrl: 'https://alexswensen.io',
   facebook: 'https://www.facebook.com/alexswensen',
