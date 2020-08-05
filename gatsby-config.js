@@ -78,6 +78,19 @@ module.exports = {
     'gatsby-transformer-yaml',
     'gatsby-plugin-feed',
     {
+      resolve: 'gatsby-plugin-manifest',
+      options: {
+        name: `alexswensen.io`,
+        short_name: `alexswensenio`,
+        start_url: `/`,
+        background_color: `#ffffff`,
+        theme_color: `#000000`,
+        display: `minimal-ui`,
+        icon: `src/content/img/fav-icon.png`
+      },
+    },
+    'gatsby-plugin-offline',
+    {
       resolve: 'gatsby-plugin-postcss',
       options: {
         postCssPlugins: [require('postcss-color-function'), require('cssnano')()],
