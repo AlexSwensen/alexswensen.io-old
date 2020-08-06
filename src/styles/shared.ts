@@ -13,7 +13,7 @@ export const outer = css`
 // Centered content container blocks
 export const inner = css`
   margin: 0 auto;
-  max-width: 1040px;
+  max-width: 1200px;
   width: 100%;
 `;
 

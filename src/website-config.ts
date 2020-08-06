@@ -54,7 +54,7 @@ export interface WebsiteConfig {
 
 const config: WebsiteConfig = {
   title: 'AlexSwensen.io',
-  description: '',
+  description: 'My personal blog & projects page.',
   coverImage: 'img/blog-cover.png',
   logo: 'img/fav-icon.png',
   lang: 'en',
