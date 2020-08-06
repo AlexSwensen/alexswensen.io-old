@@ -284,7 +284,7 @@ export const NoImage = css`
 export const PostFullHeader = styled.header`
   position: relative;
   margin: 0 auto;
-  padding: 70px 170px 50px;
+  padding: 70px 5px 50px;
   border-top-left-radius: 3px;
   border-top-right-radius: 3px;
 
