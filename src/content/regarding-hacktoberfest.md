@@ -2,7 +2,7 @@
 layout: post
 title: 'Regarding Hacktoberfest, OpenSource and Spam'
 author: [Alexander Swensen]
-tags: ['Python']
+tags: ['OpenSource', 'Digital Ocean']
 image: img/hacktoberfest.png
 date: '2020-10-01T14:00:00-05:00'
 draft: false
@@ -36,3 +36,9 @@ Spam can be detected easily using the methods I described above. In addition to 
 ### #3. Communicate
 
 Rather than us getting all up in a flame war and ranting on twitter, we should come together to figure out how we can do better. Bots and spam are inevitable, but they are also predictable and can be detected. There is no reason for us to lose our heads and spread hate, Especially during a time where we are already dealing with the worst year in history.
+
+### EDIT:
+
+Looks like this topic is starting to get peoples attention. As of [this tweet](https://twitter.com/github/status/1311772722234560517) Github has enabled the ability to rate limit PR's. While not ideal, this is also a good stop-gap measure.
+
+Furthermore, Digital Ocean has released an [official response](https://hacktoberfest.digitalocean.com/hacktoberfest-update) on the measures they are taking, so that hits on point number 3.
