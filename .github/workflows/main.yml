@@ -9,7 +9,9 @@ jobs:
       id: hello
       uses: AlexSwensen/greetings-action@v0.4-alpha
       with:
+        repo-token: ${{secrets.GITHUB_TOKEN}}
         who-to-greet: 'Mona the Octocat'
+
     # Use the output from the `hello` step
     - name: Get the output time
       run: echo "The time was ${{ steps.hello.outputs.time }}"
