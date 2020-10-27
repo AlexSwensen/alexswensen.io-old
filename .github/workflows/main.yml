@@ -1,17 +1,15 @@
 on: [pull_request]
 
 jobs:
-  hello_world_job:
+  greetings:
     runs-on: ubuntu-latest
     name: A job to say hello
     steps:
     - name: Hello world action step
       id: hello
-      uses: AlexSwensen/greetings-action@v0.4-alpha
+      uses: AlexSwensen/greetings-action@v0.5-alpha
       with:
         repo-token: ${{secrets.GITHUB_TOKEN}}
-        who-to-greet: 'Mona the Octocat'
+        pr-message: 'welcome to my fancy repo, for help feel free to open an issue [here](https://issue-url)
 
-    # Use the output from the `hello` step
-    - name: Get the output time
-      run: echo "The time was ${{ steps.hello.outputs.time }}"
+        There is also the option of this being posted on a new line'
