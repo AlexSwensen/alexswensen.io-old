@@ -8,10 +8,10 @@ import styled from '@emotion/styled';
 import { colors } from '../../styles/colors';
 import { SocialLink, SocialLinkFb } from '../../styles/shared';
 import config from '../../website-config';
-import { Facebook } from '../icons/facebook';
-import { Twitter } from '../icons/twitter';
 import { SubscribeModal } from '../subscribe/SubscribeModal';
 import { SiteNavLogo } from './SiteNavLogo';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faFacebook, faGithub, faTwitter } from '@fortawesome/free-brands-svg-icons';
 
 interface SiteNavProps {
   isHome?: boolean;
@@ -116,7 +116,7 @@ class SiteNav extends React.Component<SiteNavProps, SiteNavState> {
                 title="Facebook"
                 rel="noopener noreferrer"
               >
-                <Facebook />
+                <FontAwesomeIcon icon={faFacebook} color="#ffffff" size="2x" />
               </a>
             )}
             {config.twitter && (
@@ -127,9 +127,22 @@ class SiteNav extends React.Component<SiteNavProps, SiteNavState> {
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <Twitter />
+                <FontAwesomeIcon icon={faTwitter} color="#ffffff" size="2x" />
               </a>
             )}
+            {config.github && (
+              <a
+                className="social-link-fb"
+                css={SocialLink}
+                href={config.github}
+                title="Twitter"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <FontAwesomeIcon icon={faGithub} color="#ffffff" size="2x" />
+              </a>
+            )}
+
           </SocialLinks>
           {config.showSubscribe && (
             <SubscribeButton onClick={this.openModal}>Subscribe</SubscribeButton>
