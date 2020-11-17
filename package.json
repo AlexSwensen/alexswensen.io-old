@@ -55,7 +55,7 @@
     "normalize.css": "8.0.1",
     "polished": "3.6.5",
     "postcss-color-function": "4.1.0",
-    "prism-themes": "1.4.0",
+    "prism-themes": "1.5.0",
     "prismjs": "1.21.0",
     "react": "16.13.1",
     "react-dom": "16.13.1",
