@@ -51,7 +51,7 @@
     "gatsby-transformer-remark": "2.10.0",
     "gatsby-transformer-sharp": "2.5.12",
     "gatsby-transformer-yaml": "2.4.10",
-    "lodash": "4.17.19",
+    "lodash": "4.17.20",
     "normalize.css": "8.0.1",
     "polished": "3.6.5",
     "postcss-color-function": "4.1.0",
