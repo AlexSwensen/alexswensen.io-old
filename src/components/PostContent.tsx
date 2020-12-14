@@ -21,9 +21,10 @@ const Ast = ({ ast, ...props }: any) => {
 export interface PostContentProps {
   htmlAst: any;
   postTitle: any;
+  location: Location;
 }
 
-const PostContent: React.FC<PostContentProps> = ({ htmlAst, postTitle }) => {
+const PostContent: React.FC<PostContentProps> = ({ htmlAst, postTitle, location }) => {
   const url = `${config.siteUrl + location.pathname}`;
   const disqusConfig = {
     url,
