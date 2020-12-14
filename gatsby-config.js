@@ -11,6 +11,12 @@ module.exports = {
     'MarkdownRemark.frontmatter.author': 'AuthorYaml',
   },
   plugins: [
+    {
+      resolve: 'gatsby-plugin-disqus',
+      options: {
+        shortname: 'alexswensenio',
+      },
+    },
     'gatsby-plugin-sitemap',
     {
       resolve: 'gatsby-plugin-sharp',
@@ -114,5 +120,6 @@ module.exports = {
         siteSpeedSampleRate: 10,
       },
     },
+
   ],
 };

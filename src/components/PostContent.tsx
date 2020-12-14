@@ -2,6 +2,8 @@ import { lighten } from 'polished';
 import React from 'react';
 import styled from '@emotion/styled';
 import RehypeReact from 'rehype-react';
+import { Disqus } from 'gatsby-plugin-disqus';
+import config from '../website-config';
 
 import { colors } from '../styles/colors';
 
@@ -18,13 +20,24 @@ const Ast = ({ ast, ...props }: any) => {
 
 export interface PostContentProps {
   htmlAst: any;
+  postTitle: any;
 }
 
-const PostContent: React.FC<PostContentProps> = ({ htmlAst }) => {
+const PostContent: React.FC<PostContentProps> = ({ htmlAst, postTitle }) => {
+  const url = `${config.siteUrl + location.pathname}`;
+  const disqusConfig = {
+    url,
+    identifier: url,
+    title: postTitle,
+  };
+
   return (
     <PostFullContent className="post-full-content">
       {/* TODO: this will apply the class when rehype-react is published https://github.com/rhysd/rehype-react/pull/11 */}
       <Ast className="post-content" ast={htmlAst} />
+      <Disqus
+        config={disqusConfig}
+      />
     </PostFullContent>
   );
 };
