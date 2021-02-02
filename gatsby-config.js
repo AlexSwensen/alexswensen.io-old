@@ -86,13 +86,13 @@ module.exports = {
     {
       resolve: 'gatsby-plugin-manifest',
       options: {
-        name: `alexswensen.io`,
-        short_name: `alexswensenio`,
-        start_url: `/`,
-        background_color: `#ffffff`,
-        theme_color: `#000000`,
-        display: `minimal-ui`,
-        icon: `src/content/img/fav-icon.png`
+        name: 'alexswensen.io',
+        short_name: 'alexswensenio',
+        start_url: '/',
+        background_color: '#ffffff',
+        theme_color: '#000000',
+        display: 'minimal-ui',
+        icon: 'src/content/img/fav-icon.png',
       },
     },
     'gatsby-plugin-remove-serviceworker',
