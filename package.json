@@ -55,7 +55,7 @@
     "gatsby-transformer-yaml": "2.4.10",
     "lodash": "4.17.20",
     "normalize.css": "8.0.1",
-    "polished": "3.6.5",
+    "polished": "4.1.2",
     "postcss-color-function": "4.1.0",
     "prism-themes": "1.4.0",
     "prismjs": "1.21.0",
