@@ -10,7 +10,7 @@ excerpt: "Update 2021: I recommend most people look into Cypress now."
 ---
 
 ## Update 2021:
-I recommend most people look into [Cypress](https://www.cypress.io/) now. It's API is far simpler, and it works well with every modern framework in existance. Best of all, its free, and easy to scale across multiple workers without having ot use the paid tier. (Although if you can afford it, you totally should, they are a great company.)
+I recommend most people look into [Cypress](https://www.cypress.io/) now. It's API is far simpler, and it works well with every modern framework in existance. Best of all, its free, and easy to scale across multiple workers without having to use the paid tier. (Although if you can afford it, you totally should, they are a great company.)
 
 ## Note: The following only applies to node 7 and below.
 
