@@ -6,14 +6,15 @@ tags: ['Getting Started']
 image: img/main-image-min.jpg
 date: '2017-06-15T17:12:37-05:00'
 draft: false
-excerpt: Coding is hard. AngularJS makes it easier, but it's still hard. With the complexity that AngularJS brings, unit testing can be hard. But the hardest thing about testing with Angular are E2E tests. This guide is written to solve the discrepancy between Jasmine unit tests, and Protractor E2E tests.
+excerpt: "Update 2021: I recommend most people look into Cypress now."
 ---
+
+## Update 2021:
+I recommend most people look into [Cypress](https://www.cypress.io/) now. It's API is far simpler, and it works well with every modern framework in existance. Best of all, its free, and easy to scale across multiple workers without having ot use the paid tier. (Although if you can afford it, you totally should, they are a great company.)
 
 ## Note: The following only applies to node 7 and below.
 
 The debugging api was broken in node 8 and the protractor team has [decided to take an alternative route for debugging going forward.](https://github.com/angular/protractor/issues/4307#issuecomment-346507942)
-
-I will write an updated article on debugging protractor tests in node 8 at a later date.
 
 >## Hard things are hard.
 
