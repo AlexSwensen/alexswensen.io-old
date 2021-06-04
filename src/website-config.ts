@@ -59,7 +59,7 @@ const config: WebsiteConfig = {
   logo: 'img/fav-icon.png',
   lang: 'en',
   siteUrl: 'https://alexswensen.io',
-  facebook: 'https://www.facebook.com/alexswensen',
+  facebook: 'https://www.facebook.com/alexanderswensen',
   twitter: 'https://twitter.com/_alexswensen',
   github: 'https://github.com/alexswensen',
   showSubscribe: false,
