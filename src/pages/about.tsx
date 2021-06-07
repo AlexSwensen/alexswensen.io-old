@@ -76,6 +76,7 @@ const About: React.FC = () => (
                   <li>TypeScript (Because types!)</li>
                   <li>AngularJS &amp; Angular</li>
                   <li>React</li>
+                  <li>VueJS</li>
                   <li>Python</li>
                   <li>C++</li>
                 </ul>
