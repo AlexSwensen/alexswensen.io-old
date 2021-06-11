@@ -57,12 +57,18 @@ const About: React.FC = () => (
             <PostFullContent className="post-full-content">
               <div className="post-content">
                 <p>
-                  You can access my resume <a href="./alex_swensen_resume.pdf" target="_blank">here</a>.
+                  You can access my resume{' '}
+                  <a href="/alex_swensen_resume.pdf" target="_blank">
+                    here
+                  </a>
+                  .
                 </p>
                 <p>
                   My full employment history can be found on my{' '}
-                  <a href="https://www.linkedin.com/in/alexswensen/" target="_blank">Linkedin</a>, which is also
-                  linked in my resume.
+                  <a href="https://www.linkedin.com/in/alexswensen/" target="_blank">
+                    Linkedin
+                  </a>
+                  , which is also linked in my resume.
                 </p>
               </div>
             </PostFullContent>
