@@ -58,7 +58,7 @@ const About: React.FC = () => (
               <div className="post-content">
                 <p>
                   You can access my resume{' '}
-                  <a href="/alex_swensen_resume.pdf" target="_blank">
+                  <a href="https://alexswensen.io/alex_swensen_resume.pdf" target="_blank">
                     here
                   </a>
                   .
