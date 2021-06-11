@@ -56,13 +56,7 @@ const About: React.FC = () => (
 
             <PostFullContent className="post-full-content">
               <div className="post-content">
-                <p>
-                  Hey there, my name is Alexander Swensen. I work for{' '}
-                  <a href="https://www.eventbrite.com/" target="_blank" rel="noopener noreferrer">
-                    Eventbrite
-                  </a>{' '}
-                  as a Software Engineer II on their frontend architecture team..
-                </p>
+                <p>Hey there, my name is Alexander Swensen.</p>
                 <p>
                   I enjoy building apps in <a href="https://angular.io/">Angular</a> and{' '}
                   <a href="https://reactjs.org/">React.js</a>, as well as with Node,{' '}
