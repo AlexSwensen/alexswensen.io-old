@@ -76,7 +76,7 @@
     "eslint": "7.15.0",
     "eslint-config-xo-react": "0.23.0",
     "eslint-config-xo-space": "0.25.0",
-    "eslint-config-xo-typescript": "0.31.0",
+    "eslint-config-xo-typescript": "0.32.0",
     "eslint-plugin-import": "2.22.0",
     "eslint-plugin-react": "7.21.5",
     "eslint-plugin-react-hooks": "4.0.8",
