@@ -58,8 +58,8 @@ const About: React.FC = () => (
               <div className="post-content">
                 <p>Hey there, my name is Alexander Swensen.</p>
                 <p>
-                  I enjoy building apps in <a href="https://angular.io/">Angular</a> and{' '}
-                  <a href="https://reactjs.org/">React.js</a>, as well as with Node,{' '}
+                  I enjoy building apps in <a href="https://angular.io/">Angular</a>,{' '}
+                  <a href="https://reactjs.org/">React.js</a>, <a href="https://vuejs.org/">Vue</a>, as well as with Node,{' '}
                   <a href="http://flask.pocoo.org/">Flask</a>, and{' '}
                   <a href="https://www.djangoproject.com/">Django</a>.
                 </p>
@@ -72,6 +72,7 @@ const About: React.FC = () => (
                   <li>React</li>
                   <li>VueJS</li>
                   <li>Python</li>
+                  <li>C#</li>
                   <li>C++</li>
                 </ul>
                 <h3 id="nerdy-things-i-like">Nerdy Things I like</h3>
@@ -90,7 +91,6 @@ const About: React.FC = () => (
                   <li>Video Games</li>
                   <li>Software Development</li>
                   <li>Embedded Development (Arduino, Raspberry Pi, etc.)</li>
-                  <li>Skateboarding</li>
                   <li>
                     Coffee <i class="fa fa-coffee"></i>
                   </li>
