@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 'I Cannot Work Remotely'
+title: 'I cannot work remotely'
 author: [Alexander Swensen]
 tags: ['Musings']
 image: img/struggle-banner.jpg
