@@ -1,7 +1,7 @@
 import { graphql, Link } from 'gatsby';
 import React from 'react';
 
-import { css } from '@emotion/core';
+import { css } from '@emotion/react';
 import styled from '@emotion/styled';
 
 import SiteNav from '../components/header/SiteNav';
@@ -23,7 +23,7 @@ interface NotFoundTemplateProps {
   };
 }
 
-const NotFoundPage: React.FC<NotFoundTemplateProps> = props => {
+const NotFoundPage = (props: NotFoundTemplateProps) => {
   const { edges } = props.data.allMarkdownRemark;
 
   return (
@@ -41,7 +41,7 @@ const NotFoundPage: React.FC<NotFoundTemplateProps> = props => {
             <section style={{ textAlign: 'center' }}>
               <ErrorCode>404</ErrorCode>
               <ErrorDescription>Page not found</ErrorDescription>
-              <Link css={ErrorLink} to="">
+              <Link css={ErrorLink} to="/">
                 Go to the front page →
               </Link>
             </section>
@@ -59,31 +59,26 @@ const NotFoundPage: React.FC<NotFoundTemplateProps> = props => {
 };
 
 export const pageQuery = graphql`
-  query {
+  {
     allMarkdownRemark(limit: 3, sort: { fields: [frontmatter___date], order: DESC }) {
       edges {
         node {
-          timeToRead
           frontmatter {
             title
             date
             tags
             image {
               childImageSharp {
-                fluid(maxWidth: 3720) {
-                  ...GatsbyImageSharpFluid
-                }
+                gatsbyImageData(layout: FULL_WIDTH)
               }
             }
             author {
-              id
+              name
               bio
               avatar {
                 children {
                   ... on ImageSharp {
-                    fluid(quality: 100, srcSetBreakpoints: [40, 80, 120]) {
-                      ...GatsbyImageSharpFluid
-                    }
+                    gatsbyImageData(layout: FULL_WIDTH, breakpoints: [40, 80, 120])
                   }
                 }
               }
@@ -91,6 +86,9 @@ export const pageQuery = graphql`
           }
           excerpt
           fields {
+            readingTime {
+              text
+            }
             layout
             slug
           }

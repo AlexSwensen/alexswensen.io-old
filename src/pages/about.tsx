@@ -1,7 +1,7 @@
 import React from 'react';
 import { Helmet } from 'react-helmet';
 
-import { css } from '@emotion/core';
+import { css } from '@emotion/react';
 
 import { Footer } from '../components/Footer';
 import SiteNav from '../components/header/SiteNav';
@@ -92,7 +92,7 @@ const About: React.FC = () => (
                   <li>Software Development</li>
                   <li>Embedded Development (Arduino, Raspberry Pi, etc.)</li>
                   <li>
-                    Coffee <i class="fa fa-coffee"></i>
+                    Coffee <i className="fa fa-coffee"></i>
                   </li>
                 </ul>
               </div>

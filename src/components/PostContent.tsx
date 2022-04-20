@@ -4,12 +4,10 @@ import styled from '@emotion/styled';
 import RehypeReact from 'rehype-react';
 import { Disqus } from 'gatsby-plugin-disqus';
 import config from '../website-config';
-
 import { colors } from '../styles/colors';
 
 const renderAst = new RehypeReact({
   createElement: React.createElement,
-  // components: { 'interactive-counter': Counter },
   components: {},
 }).Compiler;
 
@@ -24,21 +22,17 @@ export interface PostContentProps {
   location: Location;
 }
 
-const PostContent: React.FC<PostContentProps> = ({ htmlAst, postTitle, location }) => {
+const PostContent = ({ htmlAst, postTitle, location }: PostContentProps) => {
   const url = `${config.siteUrl + location.pathname}`;
   const disqusConfig = {
     url,
     identifier: url,
     title: postTitle,
   };
-
   return (
     <PostFullContent className="post-full-content">
-      {/* TODO: this will apply the class when rehype-react is published https://github.com/rhysd/rehype-react/pull/11 */}
       <Ast className="post-content" ast={htmlAst} />
-      <Disqus
-        config={disqusConfig}
-      />
+      <Disqus config={disqusConfig} />
     </PostFullContent>
   );
 };
@@ -143,10 +137,10 @@ export const PostFullContent = styled.section`
   video {
     display: block;
     margin: 1.5em auto;
-    max-width: 1200px;
+    max-width: 1040px;
     height: auto;
   }
-  @media (max-width: 1200px) {
+  @media (max-width: 1040px) {
     img,
     video {
       width: 100%;
@@ -483,7 +477,13 @@ export const PostFullContent = styled.section`
 
     hr {
       /* border-top-color: color(var(--darkmode) l(+8%)); */
-      border-top-color: ${lighten('0.08', colors.darkmode)};
+      /* border-top-color: ${lighten('0.08', colors.darkmode)}; */
+      border-top-color: #17191c;
+    }
+
+    hr:after {
+      background: #17191c;
+      box-shadow: ${colors.darkmode} 0 0 0 5px;
     }
 
     figcaption {

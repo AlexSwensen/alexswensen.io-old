@@ -1,6 +1,6 @@
 import { graphql } from 'gatsby';
 import React from 'react';
-import { FluidObject } from 'gatsby-image';
+import { getSrc } from 'gatsby-plugin-image';
 
 import { Footer } from '../components/Footer';
 import SiteNav from '../components/header/SiteNav';
@@ -34,13 +34,9 @@ interface TagTemplateProps {
     allTagYaml: {
       edges: Array<{
         node: {
-          id: string;
+          yamlId: string;
           description: string;
-          image?: {
-            childImageSharp: {
-              fluid: FluidObject;
-            };
-          };
+          image?: any;
         };
       }>;
     };
@@ -56,9 +52,7 @@ interface TagTemplateProps {
 const Tags = ({ pageContext, data, location }: TagTemplateProps) => {
   const tag = pageContext.tag ? pageContext.tag : '';
   const { edges, totalCount } = data.allMarkdownRemark;
-  const tagData = data.allTagYaml.edges.find(
-    n => n.node.id.toLowerCase() === tag.toLowerCase(),
-  );
+  const tagData = data.allTagYaml.edges.find(n => n.node.yamlId.toLowerCase() === tag.toLowerCase());
 
   return (
     <IndexLayout>
@@ -84,10 +78,7 @@ const Tags = ({ pageContext, data, location }: TagTemplateProps) => {
         )}
       </Helmet>
       <Wrapper>
-        <header
-          className="site-archive-header"
-          css={[SiteHeader, SiteArchiveHeader]}
-        >
+        <header className="site-archive-header" css={[SiteHeader, SiteArchiveHeader]}>
           <div css={[outer, SiteNavMain]}>
             <div css={inner}>
               <SiteNav isHome={false} />
@@ -95,7 +86,7 @@ const Tags = ({ pageContext, data, location }: TagTemplateProps) => {
           </div>
           <ResponsiveHeaderBackground
             css={[outer, SiteHeaderBackground]}
-            backgroundImage={tagData?.node?.image?.childImageSharp?.fluid?.src}
+            backgroundImage={getSrc(tagData?.node?.image)}
             className="site-header-background"
           >
             <SiteHeaderContent css={inner} className="site-header-content">
@@ -132,17 +123,15 @@ const Tags = ({ pageContext, data, location }: TagTemplateProps) => {
 export default Tags;
 
 export const pageQuery = graphql`
-  query($tag: String) {
+  query ($tag: String) {
     allTagYaml {
       edges {
         node {
-          id
+          yamlId
           description
           image {
             childImageSharp {
-              fluid(maxWidth: 3720) {
-                ...GatsbyImageSharpFluid
-              }
+              gatsbyImageData(layout: FULL_WIDTH)
             }
           }
         }
@@ -157,7 +146,6 @@ export const pageQuery = graphql`
       edges {
         node {
           excerpt
-          timeToRead
           frontmatter {
             title
             excerpt
@@ -165,26 +153,23 @@ export const pageQuery = graphql`
             date
             image {
               childImageSharp {
-                fluid(maxWidth: 1240) {
-                  ...GatsbyImageSharpFluid
-                }
+                gatsbyImageData(layout: FULL_WIDTH)
               }
             }
             author {
-              id
+              name
               bio
               avatar {
-                children {
-                  ... on ImageSharp {
-                    fluid(quality: 100, srcSetBreakpoints: [40, 80, 120]) {
-                      ...GatsbyImageSharpFluid
-                    }
-                  }
+                childImageSharp {
+                  gatsbyImageData(layout: FULL_WIDTH, breakpoints: [40, 80, 120])
                 }
               }
             }
           }
           fields {
+            readingTime {
+              text
+            }
             layout
             slug
           }
