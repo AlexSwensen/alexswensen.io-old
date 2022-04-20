@@ -1054,14 +1054,7 @@
     core-js-pure "^3.0.0"
     regenerator-runtime "^0.13.4"
 
-"@babel/runtime@^7.10.0", "@babel/runtime@^7.10.2", "@babel/runtime@^7.7.2", "@babel/runtime@^7.8.4", "@babel/runtime@^7.9.2":
-  version "7.12.5"
-  resolved "https://registry.yarnpkg.com/@babel/runtime/-/runtime-7.12.5.tgz#410e7e487441e1b360c29be715d870d9b985882e"
-  integrity sha512-plcc+hbExy3McchJCEQG3knOsuh3HH+Prx1P6cLIkET/0dLuQDEnrT+s27Axgc9bqfsmNUNHfscgMUdBpC9xfg==
-  dependencies:
-    regenerator-runtime "^0.13.4"
-
-"@babel/runtime@^7.13.10", "@babel/runtime@^7.15.4", "@babel/runtime@^7.16.3", "@babel/runtime@^7.16.7":
+"@babel/runtime@^7.10.0", "@babel/runtime@^7.10.2", "@babel/runtime@^7.13.10", "@babel/runtime@^7.15.4", "@babel/runtime@^7.16.3", "@babel/runtime@^7.16.7", "@babel/runtime@^7.7.2", "@babel/runtime@^7.8.4", "@babel/runtime@^7.9.2":
   version "7.17.9"
   resolved "https://registry.yarnpkg.com/@babel/runtime/-/runtime-7.17.9.tgz#d19fbf802d01a8cb6cf053a64e472d42c434ba72"
   integrity sha512-lSiBBvodq29uShpWGNbgFdKYNiFDo5/HIYsaCEY9ff4sb10x9jizo2+pRrSyF4jKZCXqgzuqBOQKbUm90gQwJg==
@@ -6088,10 +6081,10 @@ gatsby-react-router-scroll@^5.7.0:
     "@babel/runtime" "^7.15.4"
     prop-types "^15.8.1"
 
-gatsby-remark-copy-linked-files@5.7.0:
-  version "5.7.0"
-  resolved "https://registry.yarnpkg.com/gatsby-remark-copy-linked-files/-/gatsby-remark-copy-linked-files-5.7.0.tgz#3a79f4f42d2c552e5c7cc13af22c7dc02d9869cb"
-  integrity sha512-6I7EQCeJBHO9El9PPIAFeWckbW7E5vt/oHEh4FGu/ZtOdUaaBQS8Xmm4zrX2bsoz0S+aWqqi76QPOWM48HVYWQ==
+gatsby-remark-copy-linked-files@5.12.1:
+  version "5.12.1"
+  resolved "https://registry.yarnpkg.com/gatsby-remark-copy-linked-files/-/gatsby-remark-copy-linked-files-5.12.1.tgz#288b6dad0497cf6efa5075346e4f7f52bb68bf90"
+  integrity sha512-Xurm1LuEOhti3FP/mAwnK82bkUGXqm/3WnGTy7NIOjn9XjT3gqY1ffJzvMYGQK4v3AE3pj7KTR3XZgEpVHF0Kw==
   dependencies:
     "@babel/runtime" "^7.15.4"
     cheerio "^1.0.0-rc.10"
@@ -6099,7 +6092,7 @@ gatsby-remark-copy-linked-files@5.7.0:
     is-relative-url "^3.0.0"
     lodash "^4.17.21"
     path-is-inside "^1.0.2"
-    probe-image-size "^6.0.0"
+    probe-image-size "^7.2.3"
     unist-util-visit "^2.0.3"
 
 gatsby-remark-images@6.7.0:
@@ -10111,6 +10104,15 @@ probe-image-size@^6.0.0:
   integrity sha512-99PZ5+RU4gqiTfK5ZDMDkZtn6eL4WlKfFyVJV7lFQvH3iGmQ85DqMTOdxorERO26LHkevR2qsxnHp0x/2UDJPA==
   dependencies:
     deepmerge "^4.0.0"
+    needle "^2.5.2"
+    stream-parser "~0.3.1"
+
+probe-image-size@^7.2.3:
+  version "7.2.3"
+  resolved "https://registry.yarnpkg.com/probe-image-size/-/probe-image-size-7.2.3.tgz#d49c64be540ec8edea538f6f585f65a9b3ab4309"
+  integrity sha512-HubhG4Rb2UH8YtV4ba0Vp5bQ7L78RTONYu/ujmCu5nBI8wGv24s4E9xSKBi0N1MowRpxk76pFCpJtW0KPzOK0w==
+  dependencies:
+    lodash.merge "^4.6.2"
     needle "^2.5.2"
     stream-parser "~0.3.1"
 
