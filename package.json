@@ -1,9 +1,9 @@
 {
-  "name": "gatsby-casper",
-  "description": "Casper for gatsby",
+  "name": "alexswensen.io",
+  "description": "My personal blog & home page",
   "version": "0.0.0",
   "private": true,
-  "author": "Scott Cooper <scttcper@gmail.com>",
+  "author": "Alexander Swensen <alex.swensen@gmail.com>",
   "license": "MIT",
   "scripts": {
     "build": "gatsby build",
