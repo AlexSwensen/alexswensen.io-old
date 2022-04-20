@@ -1,10 +1,10 @@
 import { Link } from 'gatsby';
-import Img from 'gatsby-image';
+import { GatsbyImage, getImage } from 'gatsby-plugin-image';
 import * as _ from 'lodash';
 import { lighten } from 'polished';
 import React, { useState } from 'react';
 
-import { css } from '@emotion/core';
+import { css } from '@emotion/react';
 
 import { colors } from '../styles/colors';
 import { Author } from '../templates/post';
@@ -16,9 +16,9 @@ interface AuthorListItemProps {
   author: Author;
 }
 
-export const AuthorListItem: React.FC<AuthorListItemProps> = props => {
+export const AuthorListItem = (props: AuthorListItemProps) => {
   const [hovered, setHover] = useState(false);
-  let timeout: NodeJS.Timeout;
+  let timeout: ReturnType<typeof setTimeout>;
   function handleMouseEnter() {
     if (props.tooltip !== 'large') {
       return;
@@ -30,35 +30,41 @@ export const AuthorListItem: React.FC<AuthorListItemProps> = props => {
 
   function handleMouseLeave() {
     clearTimeout(timeout);
-    timeout = setTimeout(() => setHover(false), 600);
+    timeout = setTimeout(() => {
+      setHover(false);
+    }, 600);
   }
 
   return (
     <AuthorListItemLi
       className="author-list-item"
-      onMouseEnter={() => handleMouseEnter()}
-      onMouseLeave={() => handleMouseLeave()}
+      onMouseEnter={() => {
+        handleMouseEnter();
+      }}
+      onMouseLeave={() => {
+        handleMouseLeave();
+      }}
     >
       {props.tooltip === 'small' && (
-        <AuthorNameTooltip className="author-name-tooltip">{props.author.id}</AuthorNameTooltip>
+        <AuthorNameTooltip className="author-name-tooltip">{props.author.name}</AuthorNameTooltip>
       )}
       {props.tooltip === 'large' && (
         <div css={[AuthorCardStyles, hovered && Hovered]} className="author-card">
-          {props.author.avatar.children.length && (
-            <Img
+          {props.author.avatar && (
+            <GatsbyImage
+              image={getImage(props.author.avatar)!}
               css={AuthorProfileImage}
               className="author-profile-image"
-              fluid={props.author.avatar.children[0].fluid}
-              fadeIn={false}
+              alt={props.author.name}
             />
           )}
           <div className="author-info">
             <div className="bio">
-              <h2>{props.author.id}</h2>
+              <h2>{props.author.name}</h2>
               <p>{props.author.bio}</p>
               <p>
-                <Link to={`/author/${_.kebabCase(props.author.id)}/`}>More posts</Link> by{' '}
-                {props.author.id}.
+                <Link to={`/author/${_.kebabCase(props.author.name)}/`}>More posts</Link> by{' '}
+                {props.author.name}.
               </p>
             </div>
           </div>
@@ -67,14 +73,13 @@ export const AuthorListItem: React.FC<AuthorListItemProps> = props => {
       <Link
         css={AuthorAvatar}
         className="author-avatar"
-        to={`/author/${_.kebabCase(props.author.id)}/`}
+        to={`/author/${_.kebabCase(props.author.name)}/`}
       >
-        <Img
+        <GatsbyImage
+          image={getImage(props.author.avatar)!}
           css={AuthorProfileImage}
           className="author-profile-image"
-          fluid={props.author.avatar.children[0].fluid}
-          alt={props.author.id}
-          fadeIn={false}
+          alt={props.author.name}
         />
       </Link>
     </AuthorListItemLi>

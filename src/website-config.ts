@@ -50,6 +50,11 @@ export interface WebsiteConfig {
    * Appears alongside the footer, after the credits
    */
   footer?: string;
+  /**
+   * Shows all post tags in main index view and post view if true
+   * Otherwise only shows first (primary) tag
+   */
+  showAllTags: boolean;
 }
 
 const config: WebsiteConfig = {
@@ -68,6 +73,7 @@ const config: WebsiteConfig = {
   mailchimpEmailFieldName: 'MERGE0',
   googleSiteVerification: 'GoogleCode',
   footer: 'is based on Gatsby',
+  showAllTags: true,
 };
 
 export default config;

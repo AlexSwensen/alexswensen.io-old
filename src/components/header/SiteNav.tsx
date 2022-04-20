@@ -2,12 +2,14 @@ import { Link } from 'gatsby';
 import { darken } from 'polished';
 import React from 'react';
 
-import { css } from '@emotion/core';
+import { css } from '@emotion/react';
 import styled from '@emotion/styled';
 
 import { colors } from '../../styles/colors';
 import { SocialLink, SocialLinkFb } from '../../styles/shared';
 import config from '../../website-config';
+import { Facebook } from '../icons/facebook';
+import { Twitter } from '../icons/twitter';
 import { SubscribeModal } from '../subscribe/SubscribeModal';
 import { SiteNavLogo } from './SiteNavLogo';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -79,80 +81,87 @@ class SiteNav extends React.Component<SiteNavProps, SiteNavState> {
     this.ticking = false;
   };
 
-  render(): JSX.Element {
+  render() {
     const { isHome = false, isPost = false, post = {} } = this.props;
     return (
-      <nav css={SiteNavStyles}>
-        <SiteNavLeft className="site-nav-left">
-          {!isHome && <SiteNavLogo />}
-          <SiteNavContent css={[this.state.showTitle ? HideNav : '']}>
-            <ul css={NavStyles} role="menu">
-              {/* TODO: mark current nav item - add class nav-current */}
-              <li role="menuitem">
-                <Link to="/">Home</Link>
-              </li>
-              <li role="menuitem">
-                <Link to="/about">About</Link>
-              </li>
-              <li role="menuitem">
-                <Link to="/uses">Uses</Link>
-              </li>
-              <li role="menuitem">
-                <Link to="/resume">Resume</Link>
-              </li>
-            </ul>
-            {isPost && (
-              <NavPostTitle ref={this.titleRef} className="nav-post-title">
-                {post.title}
-              </NavPostTitle>
+      <>
+        {config.showSubscribe && <SubscribeModal ref={this.subscribe} />}
+        <nav css={SiteNavStyles}>
+          <SiteNavLeft className="site-nav-left">
+            {!isHome && <SiteNavLogo />}
+            <SiteNavContent css={[this.state.showTitle ? HideNav : '']}>
+              <ul css={NavStyles} role="menu">
+                <li role="menuitem">
+                  <Link to="/" activeClassName="nav-current">
+                    Home
+                  </Link>
+                </li>
+                <li role="menuitem">
+                  <Link to="/about" activeClassName="nav-current">
+                    About
+                  </Link>
+                </li>
+                <li role="menuitem">
+                  <Link to="/uses" activeClassName="nav-current">
+                    Uses
+                  </Link>
+                </li>
+                <li role="menuitem">
+                  <Link to="/resume" activeClassName="nav-current">
+                    Resume
+                  </Link>
+                </li>
+              </ul>
+              {isPost && (
+                <NavPostTitle ref={this.titleRef} className="nav-post-title">
+                  {post.title}
+                </NavPostTitle>
+              )}
+            </SiteNavContent>
+          </SiteNavLeft>
+          <SiteNavRight>
+            <SocialLinks>
+              {config.facebook && (
+                <a
+                  className="social-link-fb"
+                  css={[SocialLink, SocialLinkFb]}
+                  href={config.facebook}
+                  target="_blank"
+                  title="Facebook"
+                  rel="noopener noreferrer"
+                >
+                  <FontAwesomeIcon icon={faFacebook} color="#FFFFFF" size="2x" />
+                </a>
+              )}
+              {config.twitter && (
+                <a
+                  css={SocialLink}
+                  href={config.twitter}
+                  title="Twitter"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <FontAwesomeIcon icon={faTwitter} color="#FFFFFF" size="2x"/>
+                </a>
+              )}
+              {config.github && (
+                <a
+                  css={SocialLink}
+                  href={config.github}
+                  title="GitHub"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <FontAwesomeIcon icon={faGithub} color="#FFFFFF" size="2x"/>
+                </a>
+              )}
+            </SocialLinks>
+            {config.showSubscribe && (
+              <SubscribeButton onClick={this.openModal}>Subscribe</SubscribeButton>
             )}
-          </SiteNavContent>
-        </SiteNavLeft>
-        <SiteNavRight>
-          <SocialLinks>
-            {config.facebook && (
-              <a
-                className="social-link-fb"
-                css={[SocialLink, SocialLinkFb]}
-                href={config.facebook}
-                target="_blank"
-                title="Facebook"
-                rel="noopener noreferrer"
-              >
-                <FontAwesomeIcon icon={faFacebook} color="#ffffff" size="2x" />
-              </a>
-            )}
-            {config.twitter && (
-              <a
-                css={SocialLink}
-                href={config.twitter}
-                title="Twitter"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <FontAwesomeIcon icon={faTwitter} color="#ffffff" size="2x" />
-              </a>
-            )}
-            {config.github && (
-              <a
-                className="social-link-fb"
-                css={SocialLink}
-                href={config.github}
-                title="Twitter"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <FontAwesomeIcon icon={faGithub} color="#ffffff" size="2x" />
-              </a>
-            )}
-
-          </SocialLinks>
-          {config.showSubscribe && (
-            <SubscribeButton onClick={this.openModal}>Subscribe</SubscribeButton>
-          )}
-          {config.showSubscribe && <SubscribeModal ref={this.subscribe} />}
-        </SiteNavRight>
-      </nav>
+          </SiteNavRight>
+        </nav>
+      </>
     );
   }
 }
@@ -254,6 +263,10 @@ const NavStyles = css`
   li a:hover:before {
     right: 12px;
     opacity: 0.5;
+  }
+
+  .nav-current {
+    opacity: 1;
   }
 `;
 

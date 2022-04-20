@@ -1,6 +1,6 @@
 import { lighten } from 'polished';
 
-import { css } from '@emotion/core';
+import { css } from '@emotion/react';
 import styled from '@emotion/styled';
 
 import { colors } from './colors';
@@ -13,7 +13,7 @@ export const outer = css`
 // Centered content container blocks
 export const inner = css`
   margin: 0 auto;
-  max-width: 1200px;
+  max-width: 1040px;
   width: 100%;
 `;
 
@@ -189,8 +189,8 @@ export const SiteHeaderBackground = css`
 
 export const ResponsiveHeaderBackground = styled.div<{ backgroundImage?: string }>`
   ${p =>
-    p.backgroundImage &&
-    `
+    p.backgroundImage
+    && `
     position: relative;
     margin-top: 64px;
     padding-bottom: 12px;
@@ -233,8 +233,8 @@ export const ResponsiveHeaderBackground = styled.div<{ backgroundImage?: string 
   `}
 
   ${p =>
-    !p.backgroundImage &&
-    `
+    !p.backgroundImage
+    && `
 
     padding-top: 0;
     padding-bottom: 0;
@@ -316,7 +316,8 @@ export const ResponsiveHeaderBackground = styled.div<{ backgroundImage?: string 
 
     .site-header-content {
       /* border-bottom-color: color(var(--darkmode) l(+15%)); */
-      border-bottom-color: ${lighten('0.15', colors.darkmode)};
+      /* border-bottom-color: ${lighten('0.15', colors.darkmode)}; */
+      border-bottom-color: #272a30;
     }
 
     .author-social-link a {

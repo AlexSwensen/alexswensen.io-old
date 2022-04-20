@@ -1,6 +1,4 @@
-interface CSSModule {
-  [className: string]: string;
-}
+type CSSModule = Record<string, string>;
 
 // type shims for CSS modules
 
@@ -12,6 +10,11 @@ declare module '*.module.scss' {
 declare module '*.module.css' {
   const cssModule: CSSModule;
   export = cssModule;
+}
+
+declare module '*.ico' {
+  const ico: any;
+  export = ico;
 }
 
 declare module 'rehype-react' {

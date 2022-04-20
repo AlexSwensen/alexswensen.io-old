@@ -1,8 +1,8 @@
 import { graphql } from 'gatsby';
 import React from 'react';
 import styled from '@emotion/styled';
-import { css } from '@emotion/core';
-import { FluidObject } from 'gatsby-image';
+import { css } from '@emotion/react';
+import { getSrc } from 'gatsby-plugin-image';
 
 import { Footer } from '../components/Footer';
 import SiteNav from '../components/header/SiteNav';
@@ -42,22 +42,14 @@ interface AuthorTemplateProps {
       }>;
     };
     authorYaml: {
-      id: string;
+      name: string;
       website?: string;
       twitter?: string;
       facebook?: string;
       location?: string;
-      profile_image?: {
-        childImageSharp: {
-          fluid: FluidObject;
-        };
-      };
+      profile_image?: any;
       bio?: string;
-      avatar: {
-        childImageSharp: {
-          fluid: FluidObject;
-        };
-      };
+      avatar: any;
     };
   };
 }
@@ -71,7 +63,7 @@ const Author = ({ data, location }: AuthorTemplateProps) => {
     let authorParticipated = false;
     if (edge.node.frontmatter.author) {
       edge.node.frontmatter.author.forEach(element => {
-        if (element.id === author.id) {
+        if (element.name === author.name) {
           authorParticipated = true;
         }
       });
@@ -86,17 +78,17 @@ const Author = ({ data, location }: AuthorTemplateProps) => {
       <Helmet>
         <html lang={config.lang} />
         <title>
-          {author.id} - {config.title}
+          {author.name} - {config.title}
         </title>
         <meta name="description" content={author.bio} />
         <meta property="og:site_name" content={config.title} />
         <meta property="og:type" content="profile" />
-        <meta property="og:title" content={`${author.id} - ${config.title}`} />
+        <meta property="og:title" content={`${author.name} - ${config.title}`} />
         <meta property="og:url" content={config.siteUrl + location.pathname} />
         <meta property="article:publisher" content="https://www.facebook.com/ghost" />
         <meta property="article:author" content="https://www.facebook.com/ghost" />
         <meta name="twitter:card" content="summary" />
-        <meta name="twitter:title" content={`${author.id} - ${config.title}`} />
+        <meta name="twitter:title" content={`${author.name} - ${config.title}`} />
         <meta name="twitter:url" content={config.siteUrl + location.pathname} />
         {config.twitter && (
           <meta
@@ -120,7 +112,7 @@ const Author = ({ data, location }: AuthorTemplateProps) => {
           </div>
 
           <ResponsiveHeaderBackground
-            backgroundImage={author.profile_image?.childImageSharp.fluid.src}
+            backgroundImage={getSrc(author.profile_image)}
             css={[outer, SiteHeaderBackground]}
             className="site-header-background"
           >
@@ -129,11 +121,11 @@ const Author = ({ data, location }: AuthorTemplateProps) => {
                 <img
                   style={{ marginTop: '8px' }}
                   css={[AuthorProfileImage, AuthorProfileBioImage]}
-                  src={data.authorYaml.avatar.childImageSharp.fluid.src}
-                  alt={author.id}
+                  src={getSrc(data.authorYaml.avatar)}
+                  alt={author.name}
                 />
                 <AuthHeaderContent className="author-header-content">
-                  <SiteTitle className="site-title">{author.id}</SiteTitle>
+                  <SiteTitle className="site-title">{author.name}</SiteTitle>
                   {author.bio && <AuthorBio className="author-bio">{author.bio}</AuthorBio>}
                   <div css={AuthorMeta} className="author-meta">
                     {author.location && (
@@ -188,9 +180,7 @@ const Author = ({ data, location }: AuthorTemplateProps) => {
         <main id="site-main" css={[SiteMain, outer]}>
           <div css={inner}>
             <div css={[PostFeed]}>
-              {edges.map(({ node }) => {
-                return <PostCard key={node.fields.slug} post={node} />;
-              })}
+              {edges.map(({ node }) => <PostCard key={node.fields.slug} post={node} />)}
             </div>
           </div>
         </main>
@@ -201,9 +191,9 @@ const Author = ({ data, location }: AuthorTemplateProps) => {
 };
 
 export const pageQuery = graphql`
-  query($author: String) {
-    authorYaml(id: { eq: $author }) {
-      id
+  query ($author: String) {
+    authorYaml(name: { eq: $author }) {
+      name
       website
       twitter
       bio
@@ -211,16 +201,12 @@ export const pageQuery = graphql`
       location
       profile_image {
         childImageSharp {
-          fluid(maxWidth: 3720) {
-            ...GatsbyImageSharpFluid
-          }
+          gatsbyImageData(layout: FULL_WIDTH)
         }
       }
       avatar {
         childImageSharp {
-          fluid(quality: 100, srcSetBreakpoints: [40, 80, 120]) {
-            ...GatsbyImageSharpFluid
-          }
+          gatsbyImageData(quality: 100, breakpoints: [40, 80, 120], layout: FULL_WIDTH)
         }
       }
     }
@@ -232,7 +218,6 @@ export const pageQuery = graphql`
       edges {
         node {
           excerpt
-          timeToRead
           frontmatter {
             title
             excerpt
@@ -241,26 +226,23 @@ export const pageQuery = graphql`
             draft
             image {
               childImageSharp {
-                fluid(maxWidth: 3720) {
-                  ...GatsbyImageSharpFluid
-                }
+                gatsbyImageData(layout: FULL_WIDTH)
               }
             }
             author {
-              id
+              name
               bio
               avatar {
-                children {
-                  ... on ImageSharp {
-                    fluid(quality: 100) {
-                      ...GatsbyImageSharpFluid
-                    }
-                  }
+                childImageSharp {
+                  gatsbyImageData(layout: FULL_WIDTH)
                 }
               }
             }
           }
           fields {
+            readingTime {
+              text
+            }
             layout
             slug
           }
