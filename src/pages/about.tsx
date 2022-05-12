@@ -68,7 +68,7 @@ const About: React.FC = () => (
                 </h3>
                 <ul>
                   <li>TypeScript (Because types!)</li>
-                  <li>AngularJS &amp; Angular</li>
+                  <li>Angular</li>
                   <li>React</li>
                   <li>VueJS</li>
                   <li>Python</li>
@@ -92,7 +92,7 @@ const About: React.FC = () => (
                   <li>Software Development</li>
                   <li>Embedded Development (Arduino, Raspberry Pi, etc.)</li>
                   <li>
-                    Coffee <i className="fa fa-coffee"></i>
+                    Coffee <i className="fa fa-coffee" ></i>
                   </li>
                 </ul>
               </div>
