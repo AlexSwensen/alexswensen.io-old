@@ -61,6 +61,6 @@ This takes the process of managing email versions away from Mailgun, and we just
 
 Obviously this will not work for marketing emails, but for transactional and notification emails, this is perfectly adequate.
 
-If you are interested in trying this out, i have created a [template repository on Github](https://github.com/AlexSwensen/mailgun-emails-template) that you can explore and try for yourself.
+If you are interested in trying this out, I have created a [template repository on Github](https://github.com/AlexSwensen/mailgun-emails-template) that you can explore and try for yourself.
 
 If you have any questions, feel free to leave them below, or open an issue on the Github Repo.
