@@ -14,7 +14,7 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "dependencies": {
-    "@babel/helper-builder-react-jsx": "7.16.7",
+    "@babel/helper-builder-react-jsx": "7.22.10",
     "@emotion/react": "11.7.1",
     "@emotion/styled": "11.6.0",
     "@fortawesome/fontawesome-svg-core": "^1.2.32",
