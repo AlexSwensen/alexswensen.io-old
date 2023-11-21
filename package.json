@@ -64,7 +64,7 @@
     "rehype-react": "7.0.4"
   },
   "devDependencies": {
-    "@types/lodash": "4.14.178",
+    "@types/lodash": "4.14.202",
     "@types/node": "17.0.18",
     "@types/react": "17.0.39",
     "@types/react-dom": "17.0.11",
